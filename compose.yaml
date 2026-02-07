@@ -15,4 +15,4 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
       - .:/workspace
-    command: postgres -c 'max_connections=500' -c 'logging_collector=on'
+    command: postgres -c 'max_connections=500' -c 'logging_collector=on' -c 'shared_buffers=500MB'
